@@ -1,33 +1,47 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main(){
 
-  int prime_nums[100]={3,5};
-  int i;
-  int j=0;
-  int k=0;
-  _Bool isprime=1;
+    int primes[100]={2,3};
+    int i;
+    int j=0;
+    int k=0;
+    int pindex=2;
+    _Bool isprime=1;
 
-  for(i=1;i<=100;i++)
-  {
-  
-      while(i/(prime_nums[j])>=prime_nums[j])
-      {
-  
-          if(i%prime_nums[j]==0){
-            isprime=0;
-            break;}
-            
+    for(i=5;i<=100;i++)
+        {
+        
+        while((i/primes[j])>=primes[j])
+        {
+        
+            if(i%(primes[j])==0){
+                isprime=0;
+                break;
+        }
+        
         j++;
       }
 
       j=0;
-    
+      
       if(isprime){
-        prime_nums[k+2]=i;
-        k++;
+        primes[pindex]=i;
+        pindex++;
       }
       
-  }
+      isprime=1;
+        }
 
+printf("these are the prime numbers between 30 to 100:\n");
+
+    while(primes[k]!=0)
+    {
+    printf("%d  ",primes[k]);
+    k++;
+
+    }   
+    
+return 0;
 }
+
