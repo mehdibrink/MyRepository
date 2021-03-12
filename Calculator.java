@@ -20,9 +20,6 @@ public class Calculater extends Application {
     public void start(Stage primaryStage) {
 
         Table.table_draw();
-
-
-
         primaryStage.getIcons().add(new Image("file:p.png"));
         primaryStage.setResizable(false);
         primaryStage.setTitle("Calculater");
