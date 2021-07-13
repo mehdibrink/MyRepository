@@ -1,7 +1,7 @@
-char* first_identity(char* e){
+char* first_identity(void* e){
 
-    char result[50]={};
-    char* presult=&result[0];
+
+    char* result=(char*)malloc(40);
     strcpy(result,e);
 
     _Bool symbol=(int)strchr(result,'-');
@@ -29,7 +29,6 @@ char* first_identity(char* e){
 
 
 
-    return presult;
+    return result;
 
 }
-
